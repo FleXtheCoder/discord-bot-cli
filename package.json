@@ -5,9 +5,7 @@
     "bin": {
         "create-discord-bot": "bin/index.js"
     },
-    "dependencies": {
-        "chalk": "^5.4.1"
-    },
+
     "author": "N1kl4s",
     "license": "MIT"
 }
