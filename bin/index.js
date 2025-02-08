@@ -46,7 +46,7 @@ const askQuestion = (question) => {
 
 
   console.log("📦 Installiere benötigte Bibliotheken...");
-  execSync(`npm install discord.js dotenv axios chalk`, { cwd: projectPath, stdio: "inherit" });
+  execSync(`npm install discord.js @discordjs/rest discord-api-types dotenv axios chalk fs path`, { cwd: projectPath, stdio: "inherit" });
   console.log("✅ Bibliotheken installiert.");
 
 
