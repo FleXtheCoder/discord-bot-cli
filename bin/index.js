@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import chalk from "chalk";
+
 const fs = require("fs");
 const { execSync } = require("child_process");
 const path = require("path");
@@ -80,7 +82,7 @@ GUILD_ID=${guildID}
   console.log("✅ .env-Datei erstellt.");
 
  
-  console.log("\n🎉 Dein Discord-Bot-Projekt wurde erfolgreich erstellt!");
+  console.log(chalk.green("\n🎉 Dein Discord-Bot-Projekt wurde erfolgreich erstellt!"));
   console.log("📌 Befehle zur Nutzung:");
   console.log(`   cd ${finalProjectName}`);
   console.log("   npm start (nachdem du dein Token in .env ergänzt hast)");
