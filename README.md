@@ -12,7 +12,7 @@ Ein einfaches CLI-Tool zur automatischen Erstellung eines Discord-Bot-Projekts m
 Das Tool kann global installiert werden, sodass du es überall verwenden kannst:
 
 ```sh
-npm install -g discord-bot-cli
+npm install -g https://github.com/FleXtheCoder/discord-bot-cli
 ```
 
 ## 🔄 Verwendung
