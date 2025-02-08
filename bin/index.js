@@ -86,5 +86,5 @@ GUILD_ID=${guildID}
   console.log("\n🎉 Dein Discord-Bot-Projekt wurde erfolgreich erstellt!");
   console.log("📌 Befehle zur Nutzung:");
   console.log(`   cd ${finalProjectName}`);
-  console.log("   npm start (nachdem du dein Token in .env ergänzt hast)");
+  console.log("   node index.js (nachdem du dein Token in .env ergänzt hast)");
 })();
