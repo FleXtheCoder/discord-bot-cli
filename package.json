@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "description": "CLI-Tool zur schnellen Erstellung eines Discord-Bot-Projekts",
     "bin": {
-      "create-discord-bot": "bin/index.js"
+        "create-discord-bot": "bin/index.js"
     },
-    "dependencies": {},
+    "dependencies": {
+        "chalk": "^5.4.1"
+    },
     "author": "N1kl4s",
     "license": "MIT"
-  }
-  
+}
