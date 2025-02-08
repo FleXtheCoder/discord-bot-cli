@@ -10,7 +10,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-// Frage-Funktion als Promise
+
 const askQuestion = (question) => {
   return new Promise((resolve) => {
     rl.question(question, (answer) => {
@@ -31,25 +31,25 @@ const askQuestion = (question) => {
   const finalProjectName = projectName.trim() || "my-discord-bot";
   const projectPath = path.join(process.cwd(), finalProjectName);
 
-  // Überprüfen, ob der Ordner existiert
+
   if (fs.existsSync(projectPath)) {
     console.log("⚠️ Der Ordner existiert bereits. Wähle einen anderen Namen.");
     process.exit(1);
   }
 
-  // Erstelle den Projektordner
+
   fs.mkdirSync(projectPath);
   console.log("📂 Projektverzeichnis erstellt.");
 
-  // Erstelle package.json mit Standardwerten
+
   execSync(`npm init -y`, { cwd: projectPath, stdio: "inherit" });
 
-  // Installiere notwendige Bibliotheken
+
   console.log("📦 Installiere benötigte Bibliotheken...");
   execSync(`npm install discord.js dotenv axios chalk`, { cwd: projectPath, stdio: "inherit" });
   console.log("✅ Bibliotheken installiert.");
 
-  // Erstelle index.js mit Basis-Code
+
   const indexJsContent = `require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 
@@ -71,7 +71,7 @@ client.login(process.env.TOKEN);
   fs.writeFileSync(path.join(projectPath, "index.js"), indexJsContent);
   console.log("✅ index.js erstellt.");
 
-  // Erstelle .env-Datei mit Token und Guild-ID
+ 
   const envContent = `TOKEN=${botToken}
 GUILD_ID=${guildID}
 `;
@@ -79,7 +79,7 @@ GUILD_ID=${guildID}
   fs.writeFileSync(path.join(projectPath, ".env"), envContent);
   console.log("✅ .env-Datei erstellt.");
 
-  // Fertig
+ 
   console.log("\n🎉 Dein Discord-Bot-Projekt wurde erfolgreich erstellt!");
   console.log("📌 Befehle zur Nutzung:");
   console.log(`   cd ${finalProjectName}`);
